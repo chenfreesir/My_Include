@@ -25,3 +25,23 @@ double myPow(double num, int n)
             return result;
     }
 }
+
+//Newtom's methon
+// f(x) - f(xi) / (x - xi) = f'(x)
+// f(x) = x^2 - n
+double mySqrt(double num)
+{
+    if (num == 0)
+        return 0;
+    double res = 1.0, last = 0;
+    while (res != last)
+    {
+        last = res;
+        res = (res + num / res) / 2;
+    }
+    return res;
+}
+
+#ifdef BF_ALG
+
+#endif
